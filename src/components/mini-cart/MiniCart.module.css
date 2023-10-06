@@ -1,0 +1,6 @@
+.MiniCart {
+    position: fixed;
+    bottom: 100px;
+    right: 28px;
+    z-index: 1;
+}
