@@ -11,7 +11,7 @@ datasource db {
 }
 
 model Example {
-    id        Int      @id @default(autoincrement())
+    id        Int      @id @default(sequence())
     name      String
     createdAt DateTime @default(now())
     updatedAt DateTime @updatedAt
