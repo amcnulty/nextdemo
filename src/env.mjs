@@ -13,7 +13,7 @@ export const env = createEnv({
       .refine(
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore
-        (str) => !str.includes(process.env.DATABASE_URL),
+        (str) => str.includes(process.env.DATABASE_URL),
         "You forgot to change the default URL"
       ),
     NODE_ENV: z

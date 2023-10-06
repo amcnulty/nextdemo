@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unsafe-return */
 import { render, screen } from "@testing-library/react";
-import Catalog from ".";
+import Catalog from "../src/pages/catalog";
 import useSWR from "swr";
 import { AppProvider } from "~/context/AppContext";
 

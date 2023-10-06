@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import About from './index';
+import About from '../src/pages/about/index';
 
 describe("About page", () => {
   it("should render about page header", async () => {
