@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-call */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import Layout from "~/components/layout";
 import useSWR from "swr";
@@ -11,6 +12,8 @@ export default function About() {
   console.log('data :>> ', data);
 
     const { data: examples } = useSWR('/api/example', fetcher);
+
+    console.log('examples :>> ', examples);
 
   return (
     <Layout>
