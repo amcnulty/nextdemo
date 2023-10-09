@@ -3,6 +3,7 @@
 import Layout from "~/components/layout";
 import useSWR from "swr";
 import { fetcher } from "~/util/fetcher";
+import { ProductCard } from "~/components/product-card/ProductCard";
 
 export default function About() {
   const { data } = useSWR("/api/hello", fetcher);
@@ -129,6 +130,34 @@ export default function About() {
           </div>
         </div>
       </div>
+      <div className="bg-blue-200 py-10 text-center">
+        <h2 className="mb-8 text-center text-2xl font-bold">
+          Award Winning UI
+        </h2>
+        <div className="mockup-phone w-80">
+          <div className="camera"></div>
+          <div className="display">
+            <div className="artboard artboard-demo phone-1 w-80">
+              <ProductCard
+                product={{
+                  id: 4,
+                  title: "Mens Casual Slim Fit",
+                  price: 15.99,
+                  description:
+                    "The color could be slightly different between on the screen and in practice. / Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.",
+                  category: "men's clothing",
+                  image:
+                    "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg",
+                  rating: {
+                    rate: 2.1,
+                    count: 430,
+                  },
+                }}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
       <h2 className="py-8 text-center text-2xl font-bold">FAQ</h2>
       <div className="collapse collapse-arrow rounded-none bg-base-200">
         <input type="radio" name="my-accordion-2" />
@@ -171,7 +200,7 @@ export default function About() {
           </p>
         </div>
       </div>
-      <div className="collapse-arrow collapse rounded-none bg-base-200 mb-10">
+      <div className="collapse-arrow collapse mb-10 rounded-none bg-base-200">
         <input type="radio" name="my-accordion-2" />
         <div className="collapse-title text-xl font-medium">
           What is your return policy?
