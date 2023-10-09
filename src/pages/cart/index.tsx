@@ -94,7 +94,7 @@ export default function Cart() {
               ))}
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-x-2 px-2">
+          <div className="grid grid-cols-2 gap-x-2 px-2 pb-8">
             <button className="btn btn-secondary btn-outline">
               <Link href="/catalog">Keep Shopping</Link>
             </button>
