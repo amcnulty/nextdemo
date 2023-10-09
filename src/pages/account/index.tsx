@@ -7,21 +7,29 @@ export default function Account() {
 
   return (
     <Layout>
-      {session ? (
-        <>
-          <h1>Welcome {session.user.name}</h1>
-          <button className="btn btn-warning" onClick={() => signOut()}>
-            Sign In
-          </button>
-        </>
-      ) : (
-        <>
-          <h1>Account Login</h1>
-          <button className="btn btn-primary" onClick={() => signIn()}>
-            Sign In
-          </button>
-        </>
-      )}
+      <div className="flex h-screen flex-col justify-center text-center">
+        {session ? (
+          <>
+            <h1 className="text-xl mb-8 font-bold">
+              Welcome {session.user.name}
+            </h1>
+            <span className="text-center">
+              <button className="btn btn-warning" onClick={() => signOut()}>
+                Sign Out
+              </button>
+            </span>
+          </>
+        ) : (
+          <>
+            <h1 className="text-xl mb-8 font-bold text-center">Account Login</h1>
+            <span className="text-center">
+              <button className="btn btn-primary" onClick={() => signIn()}>
+                Sign In
+              </button>
+            </span>
+          </>
+        )}
+      </div>
     </Layout>
   );
 }

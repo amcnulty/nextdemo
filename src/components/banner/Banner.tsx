@@ -23,7 +23,7 @@ export const Banner = () => {
 
   return (
     <>
-      {router.asPath !== "/" ? (
+      {router.asPath !== "/" && router.asPath !== "/account" ? (
         <div className="alert alert-info flex rounded-none">
           <svg
             xmlns="http://www.w3.org/2000/svg"
